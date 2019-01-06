@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true">
+
+    <SurfaceView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ViewSwitcher
+            android:id="@+id/viewSwitcher"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inAnimation="@android:anim/fade_in"
+            android:outAnimation="@android:anim/fade_out">
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/img1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/school_main_pic" />
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/img2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/school_main_pic1" />
+
+        </ViewSwitcher>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#3bffffff"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#aaFFFFFF"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:maxHeight="100dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/tag_line"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/heading_text_size"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_50"
+                android:layout_marginRight="@dimen/margin_50"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_gravity="right"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background1"
+                    android:onClick="principalLoginClick"
+                    android:padding="@dimen/padding_10dp"
+                    android:stateListAnimator="@null"
+                    android:text="Principal Login"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorTextWhite"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_gravity="right"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background1"
+                    android:onClick="teacherLoginClick"
+                    android:padding="@dimen/padding_10dp"
+                    android:stateListAnimator="@null"
+                    android:text="Teacher Login"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorTextWhite"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_gravity="right"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background1"
+                    android:onClick="studentLoginClick"
+                    android:padding="@dimen/padding_10dp"
+                    android:stateListAnimator="@null"
+                    android:text="Student/Parent Login"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorTextWhite"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/sendRequestForDemo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_gravity="right"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    android:background="@drawable/background1"
+                    android:padding="@dimen/padding_10dp"
+                    android:stateListAnimator="@null"
+                    android:text="Send Request For Demo"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorTextWhite"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:onClick="skipLoginSignup"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:visibility="gone"
+            android:text="SKIP"
+            android:textColor="@color/blue_dark"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/poweredByClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:padding="@dimen/padding_10dp"
+            android:text="SoftGalli"
+            android:textColor="@color/blue_dark"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:gravity="center"
+            android:layout_below="@+id/poweredByClick"
+            android:text="@string/powered_by_softgalli_with_contact_no"
+            android:textColor="@color/blue_dark"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>

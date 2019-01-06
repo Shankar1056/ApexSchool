@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/cat_text"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/background_shadow"
+        android:drawableRight="@drawable/arrow_r"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/text_15"
+        android:paddingRight="@dimen/text_15"
+        android:textSize="@dimen/text_size_18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingPrefix" />
+
+</android.support.constraint.ConstraintLayout>

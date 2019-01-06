@@ -1,0 +1,186 @@
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'realm-android'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 3
+        versionName "1.2"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    androidExtensions {
+        experimental = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dexOptions {
+        jumboMode true
+    }
+    flavorDimensions "first"
+    productFlavors {
+        gurukul {
+            dimension "first"
+            applicationId "softgalli.gurukulshikshalay"
+            getProps('./config/gurukul.props').each { p ->
+                buildConfigField 'String', p.key, p.value
+            }
+        }
+        sps {
+            dimension "first"
+            applicationId "softgalli.spsnawalshahi"
+            getProps('./config/sps.props').each { p ->
+                buildConfigField 'String', p.key, p.value
+            }
+        }
+        lcsdomchanch {
+            dimension "first"
+            applicationId "softgalli.lcs.domchanch"
+            getProps('./config/lcsdomchanch.props').each { p ->
+                buildConfigField 'String', p.key, p.value
+            }
+        }
+        lcsghorthambha {
+            dimension "first"
+            applicationId "softgalli.lcs.ghorthambha"
+            getProps('./config/lcsghorthambha.props').each { p ->
+                buildConfigField 'String', p.key, p.value
+            }
+        }
+        rssnnawadih {//rssnnawadih@gmail.com
+            dimension "first"
+            applicationId "softgalli.rssn.nawadih"
+            getProps('./config/rssnnawadih.props').each { p ->
+                buildConfigField 'String', p.key, p.value
+            }
+        }
+        qwerty {//softgalliteam@gmail.com
+            dimension "first"
+            applicationId "softgalli.qwerty.gaya"
+            getProps('./config/qwerty.props').each { p ->
+                buildConfigField 'String', p.key, p.value
+            }
+        }
+        softgalli {//softgalliteam@gmail.com
+            dimension "first"
+            applicationId "softgalli.school.mgmt.app"
+            getProps('./config/softgalli.props').each { p ->
+                buildConfigField 'String', p.key, p.value
+            }
+        }
+        modelschool {//softgalliteam@gmail.com
+            dimension "first"
+            applicationId "softgalli.model.school"
+            getProps('./config/modelschool.props').each { p ->
+                buildConfigField 'String', p.key, p.value
+            }
+        }
+        imperial {//imperialschool001@gmail.com
+            dimension "first"
+            applicationId "softgalli.imperial.markacho"
+            getProps('./config/imperial.props').each { p ->
+                buildConfigField 'String', p.key, p.value
+            }
+        }
+        eisbghorthambha {//need to create softgalliteam@gmail.com
+            dimension "first"
+            applicationId "softgalli.eisb.ghorthambha"
+            getProps('./config/eisbghorthambha.props').each { p ->
+                buildConfigField 'String', p.key, p.value
+            }
+        }
+        reliable {//need to create softgalliteam@gmail.com
+            dimension "first"
+            applicationId "softgalli.reliable.markachho"
+            getProps('./config/reliable.props').each { p ->
+                buildConfigField 'String', p.key, p.value
+            }
+        }
+        /*
+        SHA1 Key:
+        CC:6A:DB:36:28:D7:26:2B:66:BB:24:32:31:0D:EC:AB:A8:DE:D2:25
+        Fb Secret Key : 9c6e43c61bfda9f7535ee7e5ba6d1c0a
+        Facebook ID : 586920928377721
+        */
+    }
+    sourceSets {
+        main {
+            res.srcDirs =
+                    [
+                            'src/main/res/layouts/activities',
+                            'src/main/res/layouts/fragments',
+                            'src/main/res/layouts/commons',
+                            'src/main/res/layouts/adapters',
+                            'src/main/res/layouts',
+                            'src/main/res'
+                    ]
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+        disable 'MissingTranslation'
+        checkReleaseBuilds false
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+}
+
+def getProps(path) {
+    Properties props = new Properties()
+    props.load(new FileInputStream(file(path)))
+    return props
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+    implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.github.bumptech.glide:glide:4.5.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.github.citux:datetimepicker:0.2.0'
+    //Circular Image
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'net.danlew:android.joda:2.9.9'
+    //Calender library for seeing my attendence
+    implementation 'com.applandeo:material-calendar-view:1.4.0'
+    implementation files('libs/android-query-full.0.26.8.jar')
+
+    implementation 'com.flaviofaria:kenburnsview:1.0.7'
+    //Library for calling API
+    implementation 'com.loopj.android:android-async-http:1.4.9'
+    //For Chatting/database
+    implementation 'com.firebase:firebase-client-android:2.5.2+'
+    //FCM
+    implementation 'com.google.firebase:firebase-messaging:17.0.0'
+    implementation 'com.google.firebase:firebase-core:16.0.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+apply plugin: 'com.google.gms.google-services'
+repositories {
+    mavenCentral()
+}

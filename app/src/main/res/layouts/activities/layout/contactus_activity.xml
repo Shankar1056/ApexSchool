@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/main_view_margin_top"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--For absent present count -->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                card_view:cardCornerRadius="10dp"
+                card_view:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_15dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="225dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="225dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/school_main_pic" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="225dp"
+                            android:background="@drawable/bottom_tint"
+                            android:gravity="bottom"
+                            android:orientation="vertical"
+                            android:padding="@dimen/padding_15dp">
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/userProfilePicIv"
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/logo"
+                                app:civ_border_color="#dc5da4"
+                                app:civ_border_overlay="true"
+                                app:civ_border_width="2dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:text="@string/principal_name_with_designation"
+                                android:textColor="@color/colorTextWhite"
+                                android:textSize="@dimen/text_size"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:text="@string/vice_principal_name_with_designation"
+                                android:textColor="@color/colorTextWhite"
+                                android:textSize="@dimen/text_size"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:text="@string/school_name_with_dist"
+                                android:textColor="@color/colorTextWhite"
+                                android:textSize="@dimen/heading_size"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="95dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/padding_15dp"
+                        android:paddingTop="@dimen/padding_15dp">
+
+                        <ImageView
+                            android:layout_width="@dimen/margin_40"
+                            android:layout_height="@dimen/margin_40"
+                            android:src="@drawable/phone_call" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_10"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/principal_name"
+                                android:textColor="@color/textColor"
+                                android:textSize="@dimen/heading_text_size" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/principal_phone"
+                                android:textColor="@color/textColor"
+                                android:textSize="@dimen/text_size" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/callButton"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/circle"
+                            android:gravity="center"
+                            android:text="Call"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorTextWhite"
+                            android:textSize="@dimen/heading_text_size"
+                            android:textStyle="bold|italic" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="95dp"
+                        android:layout_marginTop="-15dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/padding_15dp"
+                        android:paddingTop="@dimen/padding_15dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/phone_call"
+                            android:visibility="invisible" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_10"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/vice_principal_name"
+                                android:textColor="@color/textColor"
+                                android:textSize="@dimen/heading_text_size" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/helpline_no1"
+                                android:textColor="@color/textColor"
+                                android:textSize="@dimen/text_size" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/callSchoolButton"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/circle"
+                            android:gravity="center"
+                            android:text="Call"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorTextWhite"
+                            android:textSize="@dimen/heading_text_size"
+                            android:textStyle="bold|italic" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="@dimen/margin_15dp"
+                        android:layout_marginRight="@dimen/margin_15dp"
+                        android:background="@color/hintTextColor" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/padding_15dp"
+                        android:paddingTop="@dimen/padding_15dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/email" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_10"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Email"
+                                android:textColor="@color/textColor"
+                                android:textSize="@dimen/heading_text_size" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/principal_email"
+                                android:textColor="@color/textColor"
+                                android:textSize="@dimen/text_size" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/emailButton"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/circle"
+                            android:gravity="center"
+                            android:text="Email"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorTextWhite"
+                            android:textSize="@dimen/heading_text_size"
+                            android:textStyle="bold|italic" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="@dimen/margin_15dp"
+                        android:layout_marginRight="@dimen/margin_15dp"
+                        android:background="@color/hintTextColor" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/padding_15dp"
+                        android:paddingTop="@dimen/padding_15dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/location" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_10"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Address"
+                                android:textColor="@color/textColor"
+                                android:textSize="@dimen/heading_text_size" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/full_address"
+                                android:textColor="@color/textColor"
+                                android:textSize="@dimen/text_size" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/goButton"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/circle"
+                            android:gravity="center"
+                            android:text="Go"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorTextWhite"
+                            android:textSize="@dimen/heading_text_size"
+                            android:textStyle="bold|italic" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

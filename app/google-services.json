@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "753591639603",
+    "firebase_url": "https://school-app-eae81.firebaseio.com",
+    "project_id": "school-app-eae81",
+    "storage_bucket": "school-app-eae81.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:753591639603:android:ec8a19ab2879db07",
+        "android_client_info": {
+          "package_name": "softgalli.school.mgmt.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "753591639603-ihuh5uttaa3sf9489kkdif8crab8l1pn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "softgalli.school.mgmt.app",
+            "certificate_hash": "cc6adb3628d7262b66bb2432310decaba8ded225"
+          }
+        },
+        {
+          "client_id": "753591639603-dj9adp8cjks503d6e1l2v0o28dmgfth3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZzo3pUpRMSYzHzinFDSQvGb7w2paPJ8c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "753591639603-dj9adp8cjks503d6e1l2v0o28dmgfth3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

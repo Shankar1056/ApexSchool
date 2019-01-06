@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ok">OK</string>
+    <string name="no_data_foundfailed_to_login">Failed To Login</string>
+    <string name="no_data_found">No Data Found</string>
+    <string name="invalid_request">Invalid Request</string>
+    <string name="session_expired">Session Expired</string>
+    <string name="something_went_wrong">Unknown Error</string>
+    <string name="enter_name">Enter Name Please</string>
+    <string name="enter_phone">Enter Mobile No.</string>
+    <string name="select_class">Select Class</string>
+    <string name="select_section">Select Section</string>
+    <string name="enter_address">Enter Address</string>
+    <string name="enter_roll_no">Enter Roll Number</string>
+    <string name="enter_qualification">Enter Qualification</string>
+    <string name="enter_alternat_phone">Enter Alternat Phone No.</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="user_id_cannot_empty">User Id can not be empty, Please try again</string>
+    <string name="failed_to_delete">Failed to delete, Please try again later.</string>
+    <string name="rupee_symbol">\u20B9</string>
+    <string name="class_wise_fee_details">Class-wise fee details</string>
+    <string name="please_add_fee_structure">Please add fee structure of each class for managing students fee. Click on fee rupee floating icon below to add fee structure.</string>
+    <string name="please_select_class">Please select class</string>
+    <string name="please_select_session">Please select section</string>
+    <string name="please_select_section">Please select section</string>
+    <string name="total_fee">Total Fee</string>
+    <string name="delete_teacher">Delete Teacher</string>
+    <string name="invalid_teacher_id">Invalid teacher id</string>
+    <string name="previous">Previous</string>
+    <string name="questions">Question</string>
+
+</resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3140b4</color>
+    <color name="colorPrimaryDark">#d42c8a</color>
+    <color name="colorAccent">#dc5da4</color>
+    <!--use below color only-->
+    <color name="textColor">#080808</color>
+    <color name="colorTextPrimary">#5d5d5d</color>
+    <color name="subTextColor">#484747</color>
+    <color name="colorTextSecondary">#484747</color>
+    <color name="colorTextWhite">#FFFFFF</color>
+    <color name="blue_dark">#1323a1</color>
+    <color name="hintTextColor">#595757</color>
+    <color name="yellow">#e4d020</color>
+    <color name="green">#20e42a</color>
+    <color name="md_deep_purple_500">#673ab7</color>
+    <color name="pinkcolor">#fdcfe9</color>
+    <color name="color_de00000">#de000000</color>
+    <color name="color_8a00000">#8a000000</color>
+    <color name="light_black">#2e2e2e</color>
+
+    <color name="grid_item1">#1ABC9C</color>
+    <color name="grid_item2">#3498DB</color>
+    <color name="grid_item3">#a089ec</color>
+    <color name="grid_item4">#f9ac1e</color>
+    <color name="grid_item5">#fc7162</color>
+    <color name="grid_item6">#1ABC9C</color>
+    <color name="grid_item7">#F39C12</color>
+    <color name="grid_item8">#dc5da4</color>
+    <color name="grid_item9">#d85bbe56</color>
+
+
+    <color name="background_color">#25f98de7</color>
+
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen1</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen1</item>
+    </array>
+
+    <color name="gen_white">#FFFFFF</color>
+
+    <!-- Screens background color-->
+    <color name="bg_screen1">#f94f39</color>
+
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen1">#e72007</color>
+
+    <!-- dots active colors -->
+    <color name="dot_light_screen1">#f98da5</color>
+
+    <!-- Placeholder colors-->
+
+    <color name="white">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="gray">#E6E7E8</color>
+    <color name="questionTextDefault">#6D6E70</color>
+    <color name="transparent">@android:color/transparent</color>
+    <color name="appcolor">#F701FC</color>
+
+</resources>

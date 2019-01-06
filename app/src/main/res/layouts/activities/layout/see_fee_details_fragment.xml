@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/common_toolbar" />
+
+    <!--For selecting class section and  -->
+    <include
+        android:id="@+id/classAndSessionView"
+        layout="@layout/class_session_view" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/main_view_margin_top">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/classAndSessionView"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            app:layout_anchorGravity="bottom">
+
+            <!--For showing fee details of selected class and session -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/mainCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/classAndSessionTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/heading_size"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/feeTypeAndAmountLl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="vertical" />
+
+                    <TextView
+                        android:id="@+id/totalFeeTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:background="@color/calendar_selected_date_text"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/padding_20dp"
+                        android:paddingTop="@dimen/padding_10dp"
+                        android:paddingRight="@dimen/padding_20dp"
+                        android:paddingBottom="@dimen/padding_10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/heading_size"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/updateDeleteLV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/updateFeeDetailsTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/done_button_height"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/present_button_bg"
+                            android:drawableLeft="@drawable/edit"
+                            android:gravity="center"
+                            android:text="@string/update"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorTextWhite"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:background="@color/yellow" />
+
+                        <TextView
+                            android:id="@+id/deleteFeeDetailsTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/done_button_height"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/absent_button_bg"
+                            android:drawableRight="@drawable/delete"
+                            android:gravity="center"
+                            android:text="@string/delete"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorTextWhite"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--For absent present count -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/noRecordFoundCardView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <include layout="@layout/no_record_found" />
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addFeeFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_margin="@dimen/padding_20dp"
+        android:background="@drawable/white_circle"
+        android:clickable="true"
+        android:src="@drawable/rupees_symbol" />
+</android.support.design.widget.CoordinatorLayout>
